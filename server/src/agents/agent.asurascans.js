@@ -150,7 +150,7 @@ class Asurascans extends Agent {
 
   // ----------------------------------------------------------------------------------------------------------------
   async #helperLookupMangas (host, query, offset, page) {
-    const url = `${this.host}/search?q=${encodeURIComponent(query)}`
+    const url = `${this.host}/series?name=${encodeURIComponent(query)}`
     if (page === 1) {
       try {
         const body = await this.#limiter.schedule(() => utils.getBody(url, null, true, false))
@@ -164,9 +164,9 @@ class Asurascans extends Agent {
     }
   }
 
-  async #getMangaById (host, ids) {
+  async #getMangaById (host, ids) { 
     try {
-      if (ids.url?.includes('/series/')) {
+      if (ids.url?.includes('/series')) {
         const body = await this.#limiter.schedule(() => utils.getBody(ids.url, null, true, false))
         return await this.#parseManga(this.host, body, ids.url)
       } else {
