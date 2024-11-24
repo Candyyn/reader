@@ -4,8 +4,8 @@ services:
   teemii-frontend:
     #image: dokkaner/teemii-frontend:latest
     build: ./app
-    #ports:
-    #  - "8080:80"
+    ports:
+      - "3912:80"
     networks:
       - teemii-network
     environment:
