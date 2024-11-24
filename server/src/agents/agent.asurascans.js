@@ -150,6 +150,7 @@ class Asurascans extends Agent {
 
   // ----------------------------------------------------------------------------------------------------------------
   async #helperLookupMangas (host, query, offset, page) {
+    logger.log('Asurascans trying to find manga');
     const url = `${this.host}/series?name=${encodeURIComponent(query)}`
     if (page === 1) {
       try {
