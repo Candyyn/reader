@@ -213,7 +213,7 @@ class Asurascans extends Agent {
     this.id = 'asurascans'
     this.label = 'Asurascans'
     this.url = 'https://asuracomic.net'
-    this.credits = 'Mangapill'
+    this.credits = 'Asurascans'
     this.tags = []
     this.iconURL = 'https://asuracomic.net/images/logo.webp'
     this.sourceURL = 'https://asuracomic.net/series/[id]'
@@ -240,4 +240,4 @@ class Asurascans extends Agent {
   // #endregion
 }
 
-module.exports = Mangapill
+module.exports = Asurascans
